@@ -1,0 +1,19 @@
+<!--<button mat-icon-button color="warn" >
+<mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+  </button>-->
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav1 role="navigation">
+
+<app-sidenav (closedNav)="sidenav1.close()"></app-sidenav>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <!--<button (click)="sidenav.toggle()">Show sideNav</button>-->
+   <app-header (sideNavToggle)="sidenav1.toggle()" ></app-header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
